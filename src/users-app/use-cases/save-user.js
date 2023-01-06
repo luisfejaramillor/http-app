@@ -43,9 +43,6 @@ const createUser = async(user)=> {
     })
 
     const newUser = await res.json()
-
-    console.log({newUser})
-
     return newUser
 
 }
@@ -56,8 +53,7 @@ const createUser = async(user)=> {
  * @param {Like<User>} user 
  */
 
-const updateUser = async(user)=> {
-    console.log(user)
+export const updateUser = async(user)=> {
 
     const url = `${import.meta.env.VITE_BASE_URL}/users/${user.id}`
     const res = await fetch(url,{
@@ -69,9 +65,5 @@ const updateUser = async(user)=> {
     })
 
     const updatedUser = await res.json()
-
-    console.log({updatedUser})
-
     return updatedUser
-
 }

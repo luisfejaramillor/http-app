@@ -24,7 +24,6 @@ export const showModal = async(id)=> {
 }
 
 export const hideModal = ()=> {
-    console.log('first')
     modal?.classList.add('hidden')
     form?.reset()
 }
@@ -56,7 +55,6 @@ export const renderModal = (element, saveUserCallback) => {
     })
 
     form.addEventListener('submit', async (e)=> {
-        console.log('buenas')
         e.preventDefault()
 
         const formData = new FormData(form)
